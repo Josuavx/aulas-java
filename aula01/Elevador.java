@@ -1,26 +1,36 @@
 package br.com.unit.aula01;
 
 public class Elevador {
-	int pessoas = 0;
+	int pessoas;
 	int codigo;
-	String status = "Em operação";
-	int limitepessoas = 8;
+	String status;
+	int limitePessoas;
 	
 	int consultarPessoasTransportadas() {
 		return pessoas;
 	}
 	
-	void cadastrarElevador() {
+	void cadastrarElevador(int codigo) {
 		pessoas = 0;
 		status = "Em operação";
+		this.codigo = codigo;
+		this.limitePessoas = 8;
 	}
 	
-	void registrarEntrada(quantidade) {
-		pessoas = pessoas + quantidade;
+	void registrarEntrada(int quantidade) {
+		pessoas += quantidade;
+		if (pessoas > limitePessoas) {
+			status = "Bloqueado";
+		}
 	}
 	
-	void registrarSaida() {
-		
+	void registrarSaida(int quantidade) {
+		pessoas -= quantidade;
+		if (pessoas <= limitePessoas) {
+			status = "Em operação";
+		}
 	}
+	
+	
 	
 }
