@@ -1,10 +1,10 @@
 package br.com.unit.aula01;
 
 public class Elevador {
-	int pessoas;
-	int codigo;
-	String status;
-	int limitePessoas;
+	private int pessoas;
+	private int codigo;
+	private String status;
+	private int limitePessoas;
 	
 	int consultarPessoasTransportadas() {
 		return pessoas;
@@ -31,6 +31,31 @@ public class Elevador {
 		}
 	}
 	
+	int getPessoas() {
+		return this.pessoas;
+	}
+	int getCodigo() {
+		return this.codigo;
+	}
+	String getStatus() {
+		return this.status;
+	}
+	int getLimitePessoas() {
+		return this.limitePessoas;
+	}
 	
+	
+	void setPessoas(int valor) {
+		this.pessoas = valor;
+	}	
+	void setCodigo(int valor) {
+		this.codigo = valor;
+	}
+	void setStatus(String status) {
+		this.status = status;
+	}
+	void setLimitePessoas(int limite) {
+		this.limitePessoas = limite;
+	}
 	
 }
